@@ -29,7 +29,7 @@ The prime goal of Waterfall is to provide a high-performance scalable ecosystem 
 
 # Status
 
-Proposed for Incubation.
+Incubation project of [LF Decentralized Trust](https://www.lfdecentralizedtrust.org/).
 
 The Waterfall Main network has been operating steadily since June 2024. [Current statistics](https://waterfall.network/individuals#statistics_block) are available online.
 
@@ -63,9 +63,9 @@ The code underwent [an independent audit by the Hacken team](https://audits.hack
 
 # Licensing Boundaries and Execution-Layer Replaceability
 
-The Apache 2.0 components (`wf-types`, `wf-consensus`, `wf-engine`, `wf-coordinator`) do not statically bundle or link any GPL/LGPL code. The GPL/LGPL forks are isolated behind runtime boundaries and Apache 2.0-defined interfaces.
+The Apache 2.0 components (`iguazu-types`, `iguazu-consensus`, `iguazu-engine`, `iguazu-coordinator`) do not statically bundle or link any GPL/LGPL code. The GPL/LGPL forks are isolated behind runtime boundaries and Apache 2.0-defined interfaces.
 
-- **LGPL execution layer (`wf-go-ethereum`, a go-ethereum fork).** The Apache-licensed `wf-engine` does not statically link `wf-go-ethereum` at build time. On Linux it loads the execution layer at runtime as a shared-object plugin through an Apache 2.0 Go interface defined in `wf-types`. This keeps the LGPL code separable and replaceable, consistent with the LGPL's dynamic-linking expectations. The `wf-coordinator` sidecar additionally communicates with the execution layer over standard JSON-RPC.
+- **LGPL execution layer (`wf-go-ethereum`, a go-ethereum fork).** The Apache-licensed `iguazu-engine` does not statically link `wf-go-ethereum` at build time. On Linux it loads the execution layer at runtime as a shared-object plugin through an Apache 2.0 Go interface defined in `iguazu-types`. This keeps the LGPL code separable and replaceable, consistent with the LGPL's dynamic-linking expectations. The `iguazu-coordinator` sidecar additionally communicates with the execution layer over standard JSON-RPC.
 
 - **GPL coordinator (`wf-prysm`, a Prysm fork).** Never linked into Apache-licensed code. It runs as an independent process and communicates only over gRPC - "mere aggregation" under GPL-3.0 §5.
 
@@ -77,11 +77,11 @@ To interact with the network, including sending transactions and calling smart c
 
 # References
 
-1. [Repository for types](https://github.com/waterfall-network/wf-types)
-2. [Repository for engine](https://github.com/waterfall-network/wf-engine)
-3. [Repository for consensus library](https://github.com/waterfall-network/wf-consensus)
-4. [Repository for coordinator sidecar](https://github.com/waterfall-network/wf-coordinator)
-5. [Repository for one-click app](https://github.com/LF-Decentralized-Trust-labs/waterfall-one-click-setup-app)
+1. [Repository for types](https://github.com/LFDT-Iguazu/iguazu-types)
+2. [Repository for engine](https://github.com/LFDT-Iguazu/iguazu-engine)
+3. [Repository for consensus library](https://github.com/LFDT-Iguazu/iguazu-consensus)
+4. [Repository for coordinator sidecar](https://github.com/LFDT-Iguazu/iguazu-coordinator)
+5. [Repository for one-click app](https://github.com/LFDT-Iguazu/waterfall-one-click-setup-app)
 6. [Repository for Go-Ethereum fork](https://github.com/waterfall-network/wf-go-ethereum)
 7. [Repository for Prysm fork](https://github.com/waterfall-network/wf-prysm)
 8. [Waterfall research papers](https://waterfall.network/developers/research-papers)
