@@ -75,6 +75,23 @@ The Apache 2.0 components (`iguazu-types`, `iguazu-consensus`, `iguazu-engine`, 
 
 To interact with the network, including sending transactions and calling smart contracts, a user must install [an EVM-compatible wallet](https://docs.waterfall.network/getting-started/metamask/). Also, everyone can [run a mainnet node](https://docs.waterfall.network/tutorials/setup-docker-node-mainnet/) on his/her device or a cloud-based service for participating in the consensus and block validating. The minimum hardware requirements include a CPU with at least 4 cores and 12 GB of RAM. There is [a native app](https://docs.waterfall.network/tutorials/setup-native-node-app/) for MacOS and Windows and [infrastructure providers](https://waterfall.network/staking-infrastructure-providers) to facilitate the deployment process. The list of [developer tools](https://waterfall.network/developers) is constantly expanding.
 
+# How To Get Involved
+
+Iguazu is an open project and everyone is welcome to participate.
+
+- **Chat with the maintainers** in the `#iguazu-general` channel on the [LF Decentralized Trust Discord server](https://discord.lfdecentralizedtrust.org/).
+- **Join the monthly Iguazu community call**, open to everyone. <!-- TODO: add the LFDT community calendar link once the call is scheduled --> Agendas and notes are kept in the [governance repository](https://github.com/LFDT-Iguazu/governance/tree/main/community_meeting_agendas).
+- **Contribute code or documentation**: pick a repository below, read its `CONTRIBUTING.md` and open an issue or a pull request. All commits require a [DCO](https://developercertificate.org/) sign-off.
+- **Learn how the project is governed**: the charter, the maintainers / TSC and the security policy are in the [governance repository](https://github.com/LFDT-Iguazu/governance).
+
+| Repository | Description |
+| ---------- | ----------- |
+| [iguazu-types](https://github.com/LFDT-Iguazu/iguazu-types) | Shared protocol types and interfaces |
+| [iguazu-consensus](https://github.com/LFDT-Iguazu/iguazu-consensus) | Consensus library (DAG consensus, prevote, spine, block voting, fork choice) |
+| [iguazu-engine](https://github.com/LFDT-Iguazu/iguazu-engine) | Core engine that hosts the execution layer as a runtime plugin |
+| [iguazu-coordinator](https://github.com/LFDT-Iguazu/iguazu-coordinator) | Sidecar that drives DAG finalization |
+| [waterfall-one-click-setup-app](https://github.com/LFDT-Iguazu/waterfall-one-click-setup-app) | Desktop app for running a node |
+
 # References
 
 1. [Repository for types](https://github.com/LFDT-Iguazu/iguazu-types)
